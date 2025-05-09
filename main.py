@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 
 import database
 
-load_dotenv()  # expects a .env with BOT_TOKEN=…
+load_dotenv()
 
-TOKEN = "MTM1Nzc0NjM2MDg3ODYyOTIxOA.G7QJ9O.NidDcXocvtWlOZUioIXxVG6-Eurnydci1ITPJo"
+TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN not set in .env")
 
